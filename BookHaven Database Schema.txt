@@ -1,0 +1,30 @@
+BookHaven Database Schema:
+
+Authors Table:
+- id (PK, INT AUTO-INCREMENT)
+- name (VARCHAR(100) NOT NULL)
+- biography (TEXT)
+
+Genres Table:
+- id (PK, INT AUTO-INCREMENT)
+- name (VARCHAR(50))
+
+Books Table:
+- id (PK, INT AUTO-INCREMENT)
+- title (VARCHAR(100) NOT NULL)
+- author_id (FK1, INT)
+- genre_id (FK2, INT)
+- price (DECIMAL(10,2) NOT NULL)
+
+Transactions Table:
+- id (PK, INT AUTO-INCREMENT)
+- customer_id (FK1, INT)
+- book_id (FK2, INT)
+- quantity (INT NOT NULL)
+- date (DATETIME NOT NULL)
+
+Customers Table:
+- id (PK, INT AUTO-INCREMENT)
+- name (VARCHAR(100) NOT NULL)
+- email (VARCHAR(100) UNIQUE)
+- phone (VARCHAR(15))
